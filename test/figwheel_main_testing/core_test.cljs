@@ -164,7 +164,7 @@
        
        (<! (asyn/timeout 100))
        (is (head-up-showing?))
-       (is (heads-up-includes? "Could not Compile"))
+       (is (heads-up-includes? "Could not" #_Compile))
        #_(is (heads-up-includes? test-str))
        (<! (asyn/timeout 1000))
        (<! (truncate-file! "src/figwheel_main_testing/changer.cljs"))

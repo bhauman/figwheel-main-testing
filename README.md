@@ -1,37 +1,29 @@
 # figwheel-main-testing
 
-FIXME: Write a one-line description of your library/project.
+Integration testing for figwheel-main
 
 ## Overview
 
-FIXME: Write a paragraph about the library/project and highlight its goals.
+Testing the round trip operation of figwheel and ensure proper file
+load order and and heads up display.
 
-## Development
+To run tests look at `deps.edn` for the options
 
-To get an interactive development environment run:
-
-    clojure -A:fig:build
-
-This will auto compile and send all changes to the browser without the
-need to reload. After the compilation process is complete, you will
-get a Browser Connected REPL. An easy way to try it is:
-
-    (js/alert "Am I connected?")
-
-and you should see an alert in the browser window.
+    clojure -A:fig:cljs-753:test
 
 To clean all compiled files:
 
     rm -rf target/public
 
-To create a production build run:
 
-	rm -rf target/public
-	clojure -A:fig:min
+## Future work
 
+* more tests!
+* make it work in a headless environment (currently a browser is launched)
+* get it working for node reloading as well
 
 ## License
 
-Copyright © 2018 FIXME
+Copyright © 2020 Bruce Hauman
 
 Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
