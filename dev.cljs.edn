@@ -1,0 +1,5 @@
+^{:watch-dirs ["test" "src"]
+  ; :css-dirs ["resources/public/css"]
+  :auto-testing {:namespaces [figwheel-main-testing.core-test]}}
+{:main figwheel-main-testing.core-test
+ :preloads [figwheel-main-testing.core]}

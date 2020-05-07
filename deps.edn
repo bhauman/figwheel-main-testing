@@ -1,0 +1,18 @@
+{:deps {org.clojure/clojure {:mvn/version "1.9.0"}
+        org.clojure/core.async {:mvn/version "1.1.587"}
+        org.clojure/clojurescript {:mvn/version "1.10.520"}}
+ :paths ["src" "resources"]
+ :aliases {:fig {:extra-deps
+                  {;; com.bhauman/rebel-readline-cljs {:mvn/version "0.1.4"}
+                   ;; com.bhauman/figwheel-main {:mvn/version "0.2.3"}
+                   com.bhauman/figwheel-main {:local/root "/Users/bhauman/workspace/figwheel/figwheel-main"}
+                   com.bhauman/figwheel-core {:local/root "/Users/bhauman/workspace/figwheel/figwheel-core"}
+                   com.bhauman/figwheel-repl {:local/root "/Users/bhauman/workspace/figwheel/figwheel-repl"}
+                   }
+                 :extra-paths ["target" "test"]}
+           :build {:main-opts ["-m" "figwheel.main" "-pc" "-b" "dev" "-r"]}
+           :min   {:main-opts ["-m" "figwheel.main" "-O" "advanced" "-bo" "dev"]}
+           ;;:test  {:main-opts ["-m" "figwheel.main" "-co" "test.cljs.edn" "-m" "figwheel-main-testing.test-runner" ]}
+           :cljs-339 {:extra-deps {org.clojure/clojurescript {:mvn/version "1.10.339"}}}
+           :cljs-753 {:extra-deps {org.clojure/clojurescript {:mvn/version  "1.10.753"}}}
+           :test  {:main-opts ["-m" "figwheel.main" "-fw" "true" "-co" "test.cljs.edn" "-c" "figwheel-main-testing.test-runner" "-s"]}}}
