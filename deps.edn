@@ -15,4 +15,6 @@
            ;;:test  {:main-opts ["-m" "figwheel.main" "-co" "test.cljs.edn" "-m" "figwheel-main-testing.test-runner" ]}
            :cljs-339 {:extra-deps {org.clojure/clojurescript {:mvn/version "1.10.339"}}}
            :cljs-753 {:extra-deps {org.clojure/clojurescript {:mvn/version  "1.10.753"}}}
-           :test  {:main-opts ["-m" "figwheel.main" "-fw" "true" "-co" "test.cljs.edn" "-c" "figwheel-main-testing.test-runner" "-s"]}}}
+           :cljs-773 {:extra-deps {org.clojure/clojurescript {:mvn/version  "1.10.773"}}}
+           :test  {:main-opts ["-m" "figwheel.main" "-fw" "true" "-co" "test.cljs.edn" "-c" "figwheel-main-testing.test-runner" "-s"]}
+           :test-bundle {:main-opts ["-m" "figwheel.main" "-fw" "true" "-co" "bundle-test.cljs.edn" "-c" "figwheel-main-testing.test-runner" "-s"]}}}

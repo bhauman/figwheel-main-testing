@@ -43,7 +43,7 @@
     res))
 
 (defn post [url data callback]
-  (xhrio/send url
+  (.send js/goog.net.XhrIo url
               (fn [e]
                 (callback (.getResponseText (.-target e))))
               "POST"
