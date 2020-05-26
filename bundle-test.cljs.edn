@@ -1,0 +1,10 @@
+^{
+  :watch-dirs ["src" #_"test"]
+  :force-watch true
+  :build-inputs ["src" "test"]
+  }
+{:main figwheel-main-testing.test-runner
+ :preloads [figwheel-main-testing.core]
+ :target :bundle
+ :bundle-cmd {:none ["npx" "webpack" "--mode=development" :output-to "-o" :final-output-to]}
+ }
